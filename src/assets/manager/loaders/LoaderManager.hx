@@ -92,13 +92,8 @@ class LoaderManager extends EventDispatcher
 	
 	public function findLoader(id):BaseLoader
     {
-        for (loader in loaders)
-        {
-            if (loader.id == id) return loader;
-        }
-
-        return null;
-    }
+		return loaders[id];
+	}
 	
     function checkLoadSequence():Void
     {
