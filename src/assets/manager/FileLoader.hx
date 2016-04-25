@@ -244,7 +244,8 @@ class FileLoader
 			id:id,
 			type:loader.type,
 			status:loader.status,
-			data:loader.data
+			data:loader.data,
+			error:loader.error
 		}
 		
 		return asset;

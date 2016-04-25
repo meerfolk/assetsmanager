@@ -5,4 +5,5 @@ typedef FileInfo = {
 	type:FileType,
 	status:LoaderStatus,
 	data:Dynamic,
+	?error : String
 }
