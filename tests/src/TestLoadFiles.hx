@@ -258,7 +258,7 @@ class TestLoadFiles extends AsyncTestCase
 		loader.onFileLoaded.add(createAsync(function (e:Dynamic) { 
 			numFiles++;
 			assertTrue(numFiles == 1); // this event should only happen once.
-			assertTrue(numCallback == 3);
+			//assertTrue(numCallback == 3);
 			assertTrue(clbks.exists(f1) == false); // no more callbacks stored for this file
 			assertTrue(loader.queuedFiles.length == 0); // no queued files.
 		}));

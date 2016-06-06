@@ -375,18 +375,19 @@ class FileLoader
 	function onManagerFileComplete(e:Event):Void {
 		var fileId = manager.loadedFiles[manager.loadedFiles.length - 1];
 		var file = getLoadedFile(fileId);
-		
-		// dispatches general signal when file is loaded.
-		onFileLoaded.dispatch(file);
-		
+				
 		// calls all unique callbacks for this specific file.
 		if (uniqueCallbacks.exists(fileId)) {
 			var list = uniqueCallbacks[fileId];
 			uniqueCallbacks.remove(fileId);
+			queuedFiles.remove(fileId);
 			for (cbk in list) {
 				cbk(file);
 			}
 		}
+		
+		// dispatches general signal when file is loaded.
+		onFileLoaded.dispatch(file);
 	}
 
 }

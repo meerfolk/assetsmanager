@@ -5,7 +5,7 @@
 	<set name="SHOW_CONSOLE" value="1"/>
 	<haxedef name="SHOW_CONSOLE"/>
 	<haxelib name="openfl" />
-	
+	<source path="src" />
 	<!-- Code coverage -->
     <!-- Compile with flag COVERAGE to view code coverage, eg: lime test neko -DCOVERAGE --> 
     <!-- Adjust packages classpath (['../src']) if necessary -->
